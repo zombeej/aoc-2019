@@ -14,7 +14,7 @@ const data = require('./data').split('\n').map(o => o.split(')'))
 // K)YOU
 // I)SAN`.split('\n').map(o => o.split(')'))
 
-const YOU =  data.find(o => o[1] === 'YOU')
+const YOU = data.find(o => o[1] === 'YOU')
 const SAN = data.find(o => o[1] === 'SAN')
 console.log(YOU, SAN)
 
@@ -47,7 +47,5 @@ function getRoute(start, end, data) {
   return i + conv
 }
 
-console.log(getRoute(YOU, SAN, data))
-
-// console.log(checksum(data))
-
+console.log('checksum:', checksum(data))
+console.log('orbital transfers:', getRoute(YOU, SAN, data))
